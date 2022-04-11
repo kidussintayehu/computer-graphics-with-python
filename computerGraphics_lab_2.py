@@ -126,22 +126,22 @@ print(arrayToExcute_1)
 print(arrayToExcute_2)
 print("---------------------")
 addedArrays = np.add(arrayToExcute_1, arrayToExcute_2)
-print(addedArrays)
+print("addition",addedArrays)
 
 subtractedArray = np.subtract(arrayToExcute_1, arrayToExcute_2)
 
-print(subtractedArray)
+print("subtruction",subtractedArray)
 
 multiplyArray = np.multiply(arrayToExcute_1, arrayToExcute_2)
 
-print(multiplyArray)
+print("multiplication",multiplyArray)
 
 dividedArray = np.divide(arrayToExcute_1, arrayToExcute_2)
-print(dividedArray)
+print("division",dividedArray)
 
 poweredArray = np.power(arrayToExcute_1, arrayToExcute_2)
 
-print(poweredArray)
+print("powered",poweredArray)
 
 modArray = np.mod(arrayToExcute_1, arrayToExcute_2)
 print(modArray)
