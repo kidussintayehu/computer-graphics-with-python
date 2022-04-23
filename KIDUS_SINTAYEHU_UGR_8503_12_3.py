@@ -135,18 +135,6 @@ win.geometry("700x350")
 # Define a function to show the popup message
 
 
-def show_msg():
-    messagebox.showinfo("Message", "Hey There! I hope you are doing well.")
-
-
-def show_msg_1():
-    messagebox.showinfo("Message_1", "Hey There! I hope you are doing well.")
-
-
-def show_msg_2():
-    messagebox.showinfo("Message_2", "Hey There! I hope you are doing well.")
-
-
 # Add an optional Label widget
 Label(win, text="Welcome Folks!", font=('Aerial 17 bold italic')).pack(pady=30)
 
