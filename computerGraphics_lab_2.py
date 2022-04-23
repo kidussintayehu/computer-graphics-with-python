@@ -1,7 +1,3 @@
-from gettext import npgettext
-import numpy
-
-
 import numpy as np
 print("creating an array and dimension of an array ")
 
