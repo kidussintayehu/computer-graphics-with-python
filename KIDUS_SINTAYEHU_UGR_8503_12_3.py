@@ -1,4 +1,3 @@
-# Import the required libraries
 from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
@@ -8,7 +7,6 @@ from OpenGL.GLU import *
 from pygame.locals import *
 import numpy as np
 
-# Create an instance of tkinter frame
 win = Tk()
 
 
@@ -45,7 +43,6 @@ def drawLogAndPower():
 def drawSineAndCubic():
     glClear(GL_COLOR_BUFFER_BIT)
     glColor3f(1.0, 0.0, 0.0)
-    # glColor3f(1.0, 1.0, 0.0)
 
     x = np.linspace(-1, 10, 100)
     y = np.sin(x)
@@ -53,7 +50,6 @@ def drawSineAndCubic():
     glPointSize(10)
     glBegin(GL_LINE_STRIP)
     for a, b in zip(x, y):
-        # give (a, b) to OpenGL to draw
         glVertex2f(a, b)
     glEnd()
 
@@ -69,7 +65,6 @@ def drawSineAndCubic():
 def drawTanAndArchTan():
     glClear(GL_COLOR_BUFFER_BIT)
     glColor3f(1.0, 0.0, 0.0)
-    # glColor3f(1.0, 1.0, 0.0)
     x = np.linspace(-1, 10, 100)
     y = np.sin(x)
     z = np.cos(x)
@@ -77,8 +72,7 @@ def drawTanAndArchTan():
     glPointSize(10)
     glBegin(GL_LINE_STRIP)
     for a, b in zip(x, w):
-        # give (a, b) to OpenGL to draw
-            glVertex2f(a ,b)
+        glVertex2f(a ,b)
     glEnd()
 
     glColor3f(1.0, 1.0, 0.0)
@@ -97,7 +91,6 @@ def logAndPower():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
 
         drawLogAndPower()
         pygame.display.flip()
@@ -110,7 +103,6 @@ def sineAndCubic():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
         drawSineAndCubic()
 
         pygame.display.flip()
@@ -123,25 +115,17 @@ def tanAndArchTan():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
         drawTanAndArchTan()
 
         pygame.display.flip()
         pygame.time.wait(10)
 
-# Set the size of the tkinter window
 win.geometry("700x350")
 
-# Define a function to show the popup message
+Label(win, text="ComputerGraphics!", font=('Aerial 17 bold italic')).pack(pady=30)
 
-
-# Add an optional Label widget
-Label(win, text="Welcome Folks!", font=('Aerial 17 bold italic')).pack(pady=30)
-
-# Create a Button to display the message
 ttk.Button(win, text="log(x) and x^2", command=logAndPower).pack(pady=20)
 ttk.Button(win, text="sin(x) and x^3", command=sineAndCubic).pack(pady=20)
 ttk.Button(win, text="tan(x) and archtan(x)", command=tanAndArchTan).pack(pady=20)
 
 win.mainloop()
-# main()
